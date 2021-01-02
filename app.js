@@ -1,20 +1,17 @@
-const http = require('http')
 const wr = require('wordreference-api')
-
-const hostname = '127.0.0.1'
-const port = 3000
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200
-  res.setHeader('Content-Type', 'text/plain')
-  res.end('Hello World')
+const express = require('express')
+const app = express()
+// TODO make port configurable in Dockerfile
+app.listen(3000, () => {
+  console.log('Server running on port 3000')
 })
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`)
+app.get('/url', (req, res, next) => {
+  res.json(['Tony', 'Lisa', 'Michael', 'Ginger', 'Food'])
+})
 
-  console.log('before')
-  wr('Rainbow')
-  wr('Rainbow', 'en', 'fr').then((result) => console.log(result))
-  console.log('after')
+app.get('/api/:word/:from/:to/', async (req, res, next) => {
+  console.log(req.params)
+  const result = await wr(req.params.word, req.params.from, req.params.to)
+  res.json(result)
 })
