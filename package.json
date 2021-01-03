@@ -1,12 +1,12 @@
 {
-  "name": "wordrefapi-test",
+  "name": "rest-wordreference-api",
   "version": "1.0.0",
-  "description": "To test wordreference-api",
+  "description": "A wrapper of wordreference-api in a GET method using Express and Docker so that it can be deployed in the cloud and used by any client, rather than being bound to using the JavaScript API.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "George Barker",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
