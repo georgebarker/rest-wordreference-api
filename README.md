@@ -9,7 +9,7 @@ docker build --tag rest-wordreference-api .
 docker run -p 3000:3000 rest-wordreference-api
 ```
 
-### Building my version available on Docker Hub
+### Run the latest version of this repo available on [Docker Hub](https://hub.docker.com/repository/docker/grbarker/rest-wordreference-api/)
 ```shell
 docker run -p 3000:3000 grbarker/rest-wordreference-api
 ```
@@ -40,4 +40,4 @@ Any issues regarding translations, definitions etc. should directed to [WordRefe
 Any changes to functionality of the API should be directed to [wordreference-api](https://github.com/fega/wordreference-api).
 
 ## License
-MIT © [George Barker](georgebarker.dev)
+MIT © [George Barker](https://georgebarker.dev)
