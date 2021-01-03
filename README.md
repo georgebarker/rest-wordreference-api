@@ -1,5 +1,5 @@
 # REST WordReference API
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/grbarker/rest-wordreference-api)
 > A wrapper of [wordreference-api](https://github.com/fega/wordreference-api) in a GET method using Express and Docker so that it can be deployed in the cloud and used by any client, rather than being bound to using the JavaScript API.
 
 ## Install & Run
@@ -30,7 +30,11 @@ curl http://localhost:3000/api/travailler/fr/en/
 | `to`      | 2     | the language to translate to   |
 
 ## Notes
-This is, on purpose, an extremely simple wrapper around the original API. Features such as API authentication and decent error handling are not included. Please feel free to fork from this project in order to extend it. If you feel that your change would strongly contribute to this without breaking the simplicity, please open a pull request.
+This is, on purpose, an extremely simple wrapper around the original API. Features such as API authentication and decent error handling are not included so far. 
+
+Please feel free to fork from this project in order to extend it. If you feel that your change would strongly contribute to this without breaking the simplicity, please open a pull request. 
+
+Please also check the Issues on this repository for contributions that can be made.
 
 Personally, I have had success running the app with Docker on DigitalOcean, as well as locally. 
 Results may vary for different environment configurations.
